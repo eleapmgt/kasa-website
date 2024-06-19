@@ -1,7 +1,9 @@
+import Logo from '../../assets/logo.svg';
+
 function Footer() {
   return (
     <footer>
-      <div>Logo</div>
+      <img src={Logo} alt="Logo" />
       <p>© 2020 Kasa. All rights reserved.</p>
     </footer>
   );

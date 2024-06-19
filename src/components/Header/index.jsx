@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/logo.svg';
 
 function Header() {
   return (
     <header>
-      <div>Logo</div>
+      <img src={Logo} alt="Logo" />
       <nav>
         <ul>
           <li>
