@@ -4,6 +4,7 @@ import Error from './pages/Error';
 import About from './pages/About';
 import Housing from './pages/Housing';
 import Layout from './components/Layout';
+import './styles/main.scss';
 
 function App() {
   return (
