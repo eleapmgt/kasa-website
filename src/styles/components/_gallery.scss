@@ -1,0 +1,17 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  gap: 30px;
+  padding: 50px;
+  margin: 40px 0;
+  place-items: center;
+
+  .gallery__link {
+    text-decoration: none;
+    width: 340px;
+  }
+}

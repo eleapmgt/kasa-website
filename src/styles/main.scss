@@ -2,14 +2,15 @@
 @import './components/_header';
 @import './components/_footer';
 @import './components/_layout';
+@import './components/_card';
+@import './components/_gallery';
+@import './components/_banner';
 
 // Pages
 @import './pages/_about';
 @import './pages/_error';
 @import './pages/_home';
 @import './pages/_housing';
-
-$primary-color: #FF6060;
 
 body {
   font-family: 'Montserrat', sans-serif;
