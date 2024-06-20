@@ -6,12 +6,13 @@
   background-color: #F6F6F6;
   border-radius: 25px;
   gap: 30px;
+  row-gap: 50px;
   padding: 50px;
   margin: 40px 0;
   place-items: center;
 
   .gallery__link {
     text-decoration: none;
-    width: 340px;
+    max-width: 340px;
   }
 }
