@@ -4,10 +4,11 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  height: 223px;
 
   &__image {
     border-radius: 25px;
-    height: 223px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
   }
