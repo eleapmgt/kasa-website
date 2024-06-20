@@ -1,8 +1,8 @@
-function Banner({ picture, text }) {
+function Banner({ image, text, isDarkened }) {
   return (
-    <div className="banner">
-      <img src={picture} alt="Bannière" />
-      <h1>{text}</h1>
+    <div className={`banner ${isDarkened ? 'banner--darkened' : ''}`}>
+      <img src={image} alt="Bannière" className="banner__image" />
+      <h1 className="banner__text">{text}</h1>
     </div>
   );
 }
