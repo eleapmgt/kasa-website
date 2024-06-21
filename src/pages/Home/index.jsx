@@ -4,14 +4,15 @@ import HomeBanner from '../../assets/home-banner.png';
 
 function Home() {
   return (
-    <div>
+    <>
       <Banner
         image={HomeBanner}
         text="Chez vous, partout et ailleurs"
         isDarkened={true}
+        page="home"
       />
       <Gallery />
-    </div>
+    </>
   );
 }
 

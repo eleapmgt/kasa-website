@@ -1,9 +1,9 @@
-function Banner({ image, text, isDarkened }) {
+function Banner({ image, text, isDarkened, page }) {
   return (
-    <div className={`banner ${isDarkened ? 'banner--darkened' : ''}`}>
+    <section className={`banner ${isDarkened && `banner--darkened-${page}`}`}>
       <img src={image} alt="Bannière" className="banner__image" />
       <h1 className="banner__text">{text}</h1>
-    </div>
+    </section>
   );
 }
 

@@ -4,7 +4,7 @@ import Logo from '../../assets/orange-logo.svg';
 function Header() {
   return (
     <header className="header">
-      <img src={Logo} alt="Logo" />
+      <img src={Logo} alt="Logo" className="header__logo" />
       <nav>
         <ul>
           <li>
