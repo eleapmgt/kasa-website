@@ -14,7 +14,7 @@ function Collapse({ title, text }) {
         <button className="collapse__button" onClick={display}>
           <img
             src={Arrow}
-            alt={isOpen ? 'Collapse' : 'Expand'}
+            alt={isOpen ? 'Expand' : 'Collapse'}
             className={`collapse__arrow ${isOpen ? 'rotate' : ''}`}
           />
         </button>
