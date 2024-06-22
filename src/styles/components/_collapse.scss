@@ -1,3 +1,55 @@
+/* .collapse {
+  display: flex;
+  flex-direction: column;
+  max-width: 1023px;
+  width: 100%;
+  margin-top: 40px;
+
+  &__header {
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF6060;
+    color: white;
+    border-radius: 5px;
+  }
+
+  &__title {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  &__button {
+    border: none;
+    padding: 0;
+    padding-right: 15px;
+    border-radius: 0 5px 5px 0;
+    background-color: #FF6060;
+  }
+
+
+
+    &__content {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    &__content--open {
+      max-height: 1000px;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #F6F6F6;
+      transition: max-height 2s ease-in;
+    }
+
+    &__content--close {
+      max-height: 0;
+      transition: max-height 2s ease-out;
+    }
+} */
+
 .collapse {
   display: flex;
   flex-direction: column;
@@ -32,23 +84,28 @@
   &__arrow {
     width: 32px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  &__arrow.rotate {
+    transform: rotate(180deg);
   }
 
   &__content {
     max-height: 0;
     overflow: hidden;
+/*     border-radius: 5px;
+    padding: 20px;
+    background-color: #F6F6F6; */
   }
 
   &__content--open {
     max-height: 1000px;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: #F6F6F6;
-    transition: max-height 2s ease-in;
+    transition: max-height 0.5s ease-in;
   }
 
   &__content--close {
     max-height: 0;
-    transition: max-height 2s ease-out;
+    transition: max-height 0.5s ease-out;
   }
 }

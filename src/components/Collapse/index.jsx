@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import UpArrow from '../../assets/up-arrow.svg';
-import DownArrow from '../../assets/down-arrow.svg';
+import Arrow from '../../assets/arrow.svg';
 
 function Collapse({ title, text }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,14 +13,16 @@ function Collapse({ title, text }) {
         <h2 className="collapse__title">{title}</h2>
         <button className="collapse__button" onClick={display}>
           <img
-            src={isOpen ? UpArrow : DownArrow}
+            src={Arrow}
             alt={isOpen ? 'Collapse' : 'Expand'}
-            className="collapse__arrow"
+            className={`collapse__arrow ${isOpen ? 'rotate' : ''}`}
           />
         </button>
       </div>
-      <div className={`collapse__content${isOpen ? '--open' : '--close'}`}>
-        {text}
+      <div
+        className={`collapse__content collapse__content${isOpen ? '--open' : '--close'}`}
+      >
+        <p>{text}</p>
       </div>
     </article>
   );
