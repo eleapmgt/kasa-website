@@ -8,10 +8,14 @@
 
   &__image {
     width: 100%;
-    max-height: 415px;
+    height: 100%;
     object-fit: cover;
     border-radius: 25px;
+    aspect-ratio: 1240/415;
+  }
 
+  &__image.fade {
+    animation: fade 0.5s ease;
   }
 
   &__counter {
@@ -42,6 +46,15 @@
 
     img {
       width: 96px;
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }

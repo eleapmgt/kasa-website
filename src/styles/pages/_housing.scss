@@ -2,3 +2,23 @@
   display: flex;
   flex-direction: column;
 }
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__housing {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__host {
+    display: flex;
+    flex-direction: column;
+
+    &-rating {
+      display: flex;
+    }
+  }
+}
