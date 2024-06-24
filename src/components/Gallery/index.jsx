@@ -5,13 +5,13 @@ import data from '../../../data.json';
 function Gallery() {
   return (
     <section className="gallery">
-      {data.map((accomodation) => (
+      {data.map((housing) => (
         <Link
-          to={`/accomodation/${accomodation.id}`}
-          key={accomodation.id}
+          to={`/housing/${housing.id}`}
+          key={housing.id}
           className="gallery__link"
         >
-          <Card title={accomodation.title} image={accomodation.cover} />
+          <Card title={housing.title} image={housing.cover} />
         </Link>
       ))}
     </section>
