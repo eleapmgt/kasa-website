@@ -10,7 +10,7 @@ function Collapse({ title, text }) {
   return (
     <article className="collapse">
       <div className="collapse__header">
-        <h2 className="collapse__title">{title}</h2>
+        <h3 className="collapse__title">{title}</h3>
         <button className="collapse__button" onClick={display}>
           <img
             src={Arrow}

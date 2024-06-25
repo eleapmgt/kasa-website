@@ -16,10 +16,16 @@ function Housing() {
           key={i}
           className="star"
           fill={`${i <= rating ? '#FF6060' : '#E3E3E3'}`}
+          style={{ width: '24px' }}
         />
       );
     }
     return stars;
+  };
+
+  const formatHostName = (name) => {
+    const nameParts = name.split(' ');
+    return `${nameParts[0]}\n${nameParts.slice(1).join(' ')}`;
   };
 
   return (
@@ -29,18 +35,20 @@ function Housing() {
         <div className="infos__housing">
           <h2>{housing.title}</h2>
           <p>{housing.location}</p>
-          {housing.tags.map((tag, index) => (
-            <span key={index} className="infos__tag">
-              {tag}
-            </span>
-          ))}
+          <div className="infos__housing-tags">
+            {housing.tags.map((tag, index) => (
+              <span key={index}>{tag}</span>
+            ))}
+          </div>
         </div>
         <div className="infos__host">
-          <p>{housing.host.name}</p>
-          <img
-            src={housing.host.picture}
-            alt={`Photo de ${housing.host.name}`}
-          />
+          <div className="infos__host-profile">
+            <p>{formatHostName(housing.host.name)}</p>
+            <img
+              src={housing.host.picture}
+              alt={`Photo de ${housing.host.name}`}
+            />
+          </div>
           <div className="infos__host-rating">
             {generateStars(housing.rating)}
           </div>
