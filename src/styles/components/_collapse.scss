@@ -60,4 +60,27 @@
   &__content-text {
     padding: 20px;
   }
+
+  @media (max-width: 375px) {
+    &__header {
+      height: 30px;
+    }
+
+    &__title {
+      padding-left: 15px;
+      font-size: 13px;
+    }
+
+    &__arrow {
+      width: 16px;
+    }
+
+    &__content--close {
+      transform: translateY(-35px);
+    }
+
+    &__content-text {
+      font-size: $font-size-xs;
+    }
+  }
 }

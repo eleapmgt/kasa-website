@@ -21,7 +21,6 @@ function Housing() {
           key={i}
           className="star"
           fill={`${i <= rating ? '#FF6060' : '#E3E3E3'}`}
-          style={{ width: '24px' }}
         />
       );
     }

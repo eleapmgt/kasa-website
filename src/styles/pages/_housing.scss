@@ -40,6 +40,7 @@
     @include flex-column;
     justify-content: space-around;
     align-items: flex-end;
+    margin-top: 10px;
 
     &-profile {
       @include flex-row;
@@ -61,6 +62,63 @@
     &-rating {
       display: flex;
       gap: 10px;
+
+      .star {
+        width: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    @include flex-column;
+    margin-top: 10px;
+
+    &__housing {
+      h2 {
+        font-size: $font-size-base;
+      }
+
+      p {
+        font-size: $font-size-sm;
+      }
+
+      &-tags {
+        gap: 10px;
+        margin-top: 10px;
+
+        span {
+          display: flex;
+          align-items: center;
+          font-size: 10px;
+          padding: 5px 20px;
+        }
+      }
+    }
+
+    &__host {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+
+      &-profile {
+        p {
+          font-size: $font-size-xs;
+        }
+
+        img {
+          width: 32px;
+        }
+      }
+
+      &-rating {
+        gap: 5px;
+
+        .star {
+          width: 13px;
+        }
+      }
     }
   }
 }
@@ -74,5 +132,12 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+  @media (max-width: 375px) {
+    @include flex-column;
+    gap: 0;
+    margin-bottom: 0;
+    margin-top: 20px;
   }
 }

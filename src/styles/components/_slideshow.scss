@@ -59,4 +59,19 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 375px) {
+    &__image {
+      height: 255px;
+      border-radius: 10px;
+    }
+
+    &__counter {
+      display: none;
+    }
+
+    &__button img {
+      width: 24px;
+    }
+  }
 }
