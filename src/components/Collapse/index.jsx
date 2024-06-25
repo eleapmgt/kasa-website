@@ -22,7 +22,7 @@ function Collapse({ title, text }) {
       <div
         className={`collapse__content collapse__content${isOpen ? '--open' : '--close'}`}
       >
-        <p>{text}</p>
+        <div className="collapse__content-text">{text}</div>
       </div>
     </article>
   );

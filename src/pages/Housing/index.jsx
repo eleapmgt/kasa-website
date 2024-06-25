@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import data from '../../../data.json';
 import Slideshow from '../../components/Slideshow';
 import Collapse from '../../components/Collapse';
@@ -7,6 +7,10 @@ import { StarIcon } from '@heroicons/react/24/solid';
 function Housing() {
   const { id } = useParams();
   const housing = data.find((item) => item.id === id);
+
+  if (!housing) {
+    return <Navigate to="/error" />;
+  }
 
   const generateStars = (rating) => {
     const totalStars = 5;

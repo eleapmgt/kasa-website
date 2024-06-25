@@ -51,12 +51,12 @@
     overflow: hidden;
     max-height: 0;
     background-color: white;
-    transition: background-color 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
-    transform: translateY(-73px);
+    transition: background-color 2s ease-in, transform 0.3s ease-in, max-height 0.3s ease-in;
+    transform: translateY(-50px);
     z-index: -1;
   }
 
-  &__content p {
+  &__content-text {
     padding: 20px;
   }
 }
