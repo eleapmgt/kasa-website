@@ -1,6 +1,7 @@
+@import '../utils/_variables';
+
 .layout {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: center;
   min-height:100vh;
 }

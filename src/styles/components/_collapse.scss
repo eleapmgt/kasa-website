@@ -1,17 +1,18 @@
+@import '../utils/_mixins';
+@import '../utils/_variables';
+
 .collapse {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   max-width: 1023px;
   width: 100%;
   margin-bottom: 25px;
 
   &__header {
     height: 52px;
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     justify-content: space-between;
     align-items: center;
-    background-color: #FF6060;
+    background-color: $primary-color;
     color: white;
     border-radius: 5px;
     z-index: 1
@@ -26,13 +27,13 @@
     padding: 0;
     padding-right: 15px;
     border-radius: 0 5px 5px 0;
-    background-color: #FF6060;
+    background-color: $primary-color;
   }
 
   &__arrow {
     width: 32px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    @include transition(transform, 0.3s, ease)
   }
 
   &__arrow.rotate {
@@ -42,7 +43,7 @@
   &__content--open {
     border-radius: 5px;
     max-height: 500px;
-    background-color: #F6F6F6;
+    background-color: $secondary-color;
     transition: background-color 0.3s ease-out, transform 0.3s ease-out, max-height 0.3s ease-out;
     transform: translateY(0);
   }

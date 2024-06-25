@@ -5,7 +5,7 @@ import AboutBanner from '../../assets/about-banner.png';
 function About() {
   return (
     <>
-      <Banner image={AboutBanner} isDarkened={true} page="about" />
+      <Banner image={AboutBanner} page="about" />
       <section className="about-section">
         <Collapse
           title="Fiabilité"

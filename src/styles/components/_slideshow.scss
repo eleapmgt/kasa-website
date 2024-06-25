@@ -1,3 +1,5 @@
+@import '../utils/_variables';
+
 .slideshow {
   display: flex;
   align-items: center;
@@ -23,7 +25,7 @@
     bottom: 20px;
     color: white;
     left: 50%;
-    font-size: 18px;
+    font-size: $font-size-base;
     transform: translateX(-50%);
   }
 

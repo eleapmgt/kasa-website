@@ -1,3 +1,7 @@
+// Utils
+@import './utils/_mixins';
+@import './utils/_variables';
+
 // Components
 @import './components/_header';
 @import './components/_footer';
@@ -15,7 +19,7 @@
 @import './pages/_housing';
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-family;
   color: black;
   max-width: 1440px;
   margin: 0 auto;
@@ -25,19 +29,23 @@ body {
 main {
   flex: 1;
   margin: 0 100px;
+
+  @media (max-width: 375px) {
+    margin: 0 20px;
+  }
 }
 
 h2 {
-  font-size: 36px;
-  font-weight: 500;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-normal;
   margin: 0;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: $font-size-lg;
 }
 
 p {
   margin: 0;
-  font-size: 18px;
+  font-size: $font-size-base;
 }

@@ -1,9 +1,11 @@
+@import '../utils/_variables';
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  background-color: #F6F6F6;
+  background-color: $secondary-color;
   border-radius: 25px;
   gap: 30px;
   row-gap: 50px;
@@ -14,5 +16,15 @@
   .gallery__link {
     text-decoration: none;
     max-width: 340px;
+  }
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: white;
   }
 }

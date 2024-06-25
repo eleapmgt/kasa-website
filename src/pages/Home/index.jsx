@@ -7,8 +7,7 @@ function Home() {
     <>
       <Banner
         image={HomeBanner}
-        text="Chez vous, partout et ailleurs"
-        isDarkened={true}
+        text={`Chez vous,\npartout et ailleurs`}
         page="home"
       />
       <Gallery />

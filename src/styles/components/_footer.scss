@@ -1,10 +1,12 @@
+@import '../utils/_mixins';
+@import '../utils/_variables';
+
 .footer {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: center;
   justify-content: center;
   background-color: black;
-  min-width: 100vh;
+  min-width: 100vw;
   height: 209px;
   color: white;
 
@@ -15,7 +17,13 @@
 
   p {
     margin-top: 20px;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-normal;
+  }
+
+  @media (max-width: 375px) {
+    p {
+      font-size: $font-size-xs;
+    }
   }
 }
