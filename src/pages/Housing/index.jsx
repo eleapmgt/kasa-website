@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import data from '../../../data.json';
 import Slideshow from '../../components/Slideshow';
+import Collapse from '../../components/Collapse';
 import { StarIcon } from '@heroicons/react/24/solid';
 
 function Housing() {
@@ -53,6 +54,19 @@ function Housing() {
             {generateStars(housing.rating)}
           </div>
         </div>
+      </section>
+      <section className="description">
+        <Collapse title="Description" text={housing.description} />
+        <Collapse
+          title="Équipements"
+          text={
+            <ul>
+              {housing.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          }
+        />
       </section>
     </div>
   );
