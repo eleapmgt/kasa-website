@@ -7,13 +7,13 @@ Kasa est une application web permettant de louer des appartements entre particul
 Cette application React est construite avec [Vite](https://vitejs.dev/) et JavaScript, et stylisée avec Sass en respectant la convention BEM. Elle utilise un fichier de données data.json pour afficher les informations utiles des logements.
 
 Homepage preview:
-![alt text](Public/homepagePreview.png)
+![alt text](public/homepagePreview.png)
 
 Housing preview:
-![alt text](Public/housingPreview.png)
+![alt text](public/housingPreview.png)
 
 About page preview:
-![alt text](Public/aboutPagePreview.png)
+![alt text](public/aboutPagePreview.png)
 
 ## Fonctionnalités
 
