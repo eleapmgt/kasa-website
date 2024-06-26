@@ -29,6 +29,7 @@
 
   &__text {
     position: absolute;
+    padding: 0 20px;
     font-weight: $font-weight-bold;
     font-size: $font-size-xxl;
     letter-spacing: 1px;
@@ -42,9 +43,9 @@
     0 0 0 #000;
   }
 
-  @media (max-width: 375px) {
-    height: 111px;
-    margin-bottom: 20px;
+  @media (max-width: 768px) {
+    height: 160px;
+    margin-bottom: 25px;
     justify-content: left;
 
     &::after {
@@ -56,12 +57,20 @@
     }
 
     &__text {
-      font-size: $font-size-lg;
+      font-size: $font-size-xl;
       letter-spacing: 0;
       text-shadow: none;
       text-align: left;
       white-space: pre-wrap;
-      padding-left: 20px;
+      padding-left: 30px;
+    }
+  }
+
+  @media (max-width: 475px) {
+    height: 111px;
+
+    &__text {
+      font-size: $font-size-lg;
     }
   }
 }

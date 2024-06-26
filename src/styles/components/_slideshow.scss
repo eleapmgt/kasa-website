@@ -60,10 +60,20 @@
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
+    &__image {
+      height: 300px;
+      border-radius: 10px;
+    }
+
+    &__button img {
+      width: 50px;
+    }
+  }
+
+  @media (max-width: 475px) {
     &__image {
       height: 255px;
-      border-radius: 10px;
     }
 
     &__counter {

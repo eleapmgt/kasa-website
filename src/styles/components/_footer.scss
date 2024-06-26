@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   background-color: black;
-  min-width: 100vw;
   height: 209px;
   color: white;
 
@@ -21,7 +20,7 @@
     font-weight: $font-weight-normal;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 475px) {
     p {
       font-size: $font-size-xs;
     }

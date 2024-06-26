@@ -10,10 +10,50 @@
   &__title {
     color: $primary-color;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   &__link {
     margin-bottom: 20px;
     color: black;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+    margin-top: 50px;
+    gap: 30px;
+
+    &__image {
+      width: 240px;
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      font-size: $font-size-lg;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    &__link {
+      font-size: $font-size-base;
+      margin-bottom: 80px;
+    }
+  }
+
+  @media (max-width: 475px) {
+    gap: 50px;
+
+    &__image {
+      width: 198px;
+    }
+
+    &__title {
+      font-size: $font-size-base;
+    }
+
+    &__link {
+      font-size: $font-size-sm;
+      margin-bottom: 50px;
+    }
   }
 }

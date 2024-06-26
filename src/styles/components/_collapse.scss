@@ -15,7 +15,7 @@
     background-color: $primary-color;
     color: white;
     border-radius: 5px;
-    z-index: 1
+    z-index: 1;
   }
 
   &__title {
@@ -61,7 +61,29 @@
     padding: 20px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
+    &__header {
+      height: 40px;
+    }
+
+    &__title {
+      font-size: $font-size-base;
+    }
+
+    &__arrow {
+      width: 22px;
+    }
+
+    &__content--close {
+      transform: translateY(-35px);
+    }
+
+    &__content-text {
+      font-size: $font-size-sm;
+    }
+  }
+
+  @media (max-width: 475px) {
     &__header {
       height: 30px;
     }
@@ -73,10 +95,6 @@
 
     &__arrow {
       width: 16px;
-    }
-
-    &__content--close {
-      transform: translateY(-35px);
     }
 
     &__content-text {

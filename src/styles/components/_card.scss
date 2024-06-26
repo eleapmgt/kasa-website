@@ -31,4 +31,31 @@
     display: flex;
     align-items: center;
   }
+
+  @media (max-width: 768px) {
+    height: 260px;
+
+    &__image {
+      min-height: 200px;
+      height: 200px;
+    }
+
+    &__figcaption {
+      font-size: $font-size-sm;
+      line-height: 18px;
+    }
+  }
+
+  @media (max-width: 475px) {
+    height: 255px;
+
+    &__image {
+      height: 195px;
+    }
+
+    &__figcaption {
+      font-size: $font-size-base;
+      line-height: 25px;
+    }
+  }
 }

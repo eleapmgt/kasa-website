@@ -25,6 +25,8 @@
       margin-top: 20px;
 
       span {
+        display: flex;
+        align-items: center;
         background-color: $primary-color;
         color: white;
         border-radius: 10px;
@@ -69,8 +71,57 @@
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     @include flex-column;
+    margin-top: 20px;
+
+    &__housing {
+      h2 {
+        font-size: $font-size-lg;
+      }
+
+      p {
+        font-size: $font-size-base;
+      }
+
+      &-tags {
+        margin-top: 15px;
+
+        span {
+          font-size: $font-size-sm;
+          padding: 5px 20px;
+        }
+      }
+    }
+
+    &__host {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+
+      &-profile {
+        p {
+          font-size: $font-size-sm;
+        }
+
+        img {
+          width: 50px;
+        }
+      }
+
+      &-rating {
+        gap: 5px;
+
+        .star {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 475px) {
     margin-top: 10px;
 
     &__housing {
@@ -83,14 +134,10 @@
       }
 
       &-tags {
-        gap: 10px;
         margin-top: 10px;
 
         span {
-          display: flex;
-          align-items: center;
           font-size: 10px;
-          padding: 5px 20px;
         }
       }
     }
@@ -113,8 +160,6 @@
       }
 
       &-rating {
-        gap: 5px;
-
         .star {
           width: 13px;
         }
@@ -134,10 +179,15 @@
     padding: 0;
   }
 
-  @media (max-width: 375px) {
+  @media(max-width: 768px) {
     @include flex-column;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 475px) {
     gap: 0;
     margin-bottom: 0;
-    margin-top: 20px;
   }
 }

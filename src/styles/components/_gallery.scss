@@ -13,18 +13,40 @@
   margin-bottom: 40px;
   place-items: center;
 
-  .gallery__link {
+  &__link {
     text-decoration: none;
     max-width: 340px;
   }
 
-  @media (max-width: 375px) {
+    @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $secondary-color;
+    row-gap: 30px;
+    margin-bottom: 40px;
+
+    &__link {
+      max-width: 340px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    align-content: space-between;
+    gap: 30px;
+    padding: 0;
+    margin-bottom: 40px;
+
+    &__link {
+      min-width: 100%;
+    }
+  }
+
+  @media (max-width: 475px) {
     display: flex;
     flex-direction: column;
-    background-color: red;
     gap: 20px;
     padding: 0;
     margin-bottom: 20px;
-    background-color: white;
   }
 }
