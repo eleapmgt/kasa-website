@@ -70,7 +70,3 @@ Nomenclature explicite avec src/main.jsx comme point d'entrée.
 ```bash
 yarn add sass
 ```
-
-## TODO
-
-- Cards avec hover animations.

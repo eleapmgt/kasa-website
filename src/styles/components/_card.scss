@@ -6,6 +6,11 @@
   height: 340px;
   background-color: $primary-color;
   border-radius: 10px;
+  transition: ease-in-out 250ms;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &__figure {
     margin: 0;
