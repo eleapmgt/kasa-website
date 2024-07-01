@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Arrow from '../../assets/arrow.svg';
 
 function Slideshow({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [fade, setFade] = useState(false);
+  const [fade, setFade] = useState(true);
 
   const handlePrevClick = () => {
     setFade(false);
@@ -18,16 +18,12 @@ function Slideshow({ images }) {
   const handleNextClick = () => {
     setFade(false);
     setTimeout(() => {
-      setCurrentIndex((nextClick) =>
-        nextClick === images.length - 1 ? 0 : nextClick + 1
-      );
+      setCurrentIndex((nextClick) => {
+        nextClick === images.length - 1 ? 0 : nextClick + 1;
+      });
       setFade(true);
     }, 50);
   };
-
-  useEffect(() => {
-    setFade(true);
-  }, [currentIndex]);
 
   if (images.length === 1) {
     return (
