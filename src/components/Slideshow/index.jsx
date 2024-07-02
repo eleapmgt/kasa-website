@@ -18,9 +18,9 @@ function Slideshow({ images }) {
   const handleNextClick = () => {
     setFade(false);
     setTimeout(() => {
-      setCurrentIndex((nextClick) => {
-        nextClick === images.length - 1 ? 0 : nextClick + 1;
-      });
+      setCurrentIndex((nextClick) =>
+        nextClick === images.length - 1 ? 0 : nextClick + 1
+      );
       setFade(true);
     }, 50);
   };
